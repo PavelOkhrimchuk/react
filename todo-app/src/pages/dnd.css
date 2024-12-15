@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Arimo:400,700|Roboto+Slab:400,700");
+
+:root {
+  font-size: calc(0.5vw + 1vh);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 420px;
+}
+
+h1, h4 {
+  font-family: "Arimo", sans-serif;
+  line-height: 1.3;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin: 2rem auto;
+}
+
+.columns {
+  display: flex;
+  margin: 1.6rem auto;
+}
+
+.column {
+  width: 250px; /* Ширина колонки */
+  margin: 0 0.6rem;
+  background: #a8a8a8;
+  border: #000013 0.2rem solid;
+  border-radius: 0.2rem;
+}
+
+.column-header {
+  padding: 0.1rem;
+  border-bottom: #000013 0.2rem solid;
+  background: #ff872f; 
+}
+
+.to-do-column .column-header {
+  background: #ff872f;
+}
+
+.inProgress-column .column-header {
+  background: #13a4d9;
+}
+
+.done-column .column-header {
+  background: #15d072;
+}
+
+.blocked-column .column-header {
+  background: #ff4444;
+}
+
+.task-list {
+  min-height: 3rem;
+  padding: 4px; /* Отступ внутри списка задач */
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  margin: 0.4rem;
+  height: 50px;
+  border: #000013 0.15rem solid;
+  border-radius: 0.2rem;
+  cursor: move;
+  transition: background-color 0.3s;
+}
+
+.delete-button {
+  background-color: #ff4444;
+  border: none;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #fa7070;
+}
+
+
+.dragging {
+  opacity: 0.8;
+}
+
+.dragging-over {
+  background: lightblue; 
+}
